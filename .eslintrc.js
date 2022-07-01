@@ -27,6 +27,9 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'space-before-function-paren': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-named-as-default': 0,
+    'react/no-array-index-key': 0
   }
 };
