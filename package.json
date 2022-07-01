@@ -1,7 +1,10 @@
 {
-  "name": "template-initial-config-next-ts-eslint-prettier",
+  "name": "portfolio-next",
   "version": "1.0",
   "private": true,
+  "author": {
+    "name": "Paulo Marioto"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
