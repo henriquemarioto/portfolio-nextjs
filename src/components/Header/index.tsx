@@ -1,13 +1,15 @@
 import { HiMenu } from 'react-icons/hi';
+import ContentContainer from '../ContentContainer';
 import { Container, MenuButton } from './style';
 
 const Header = () => (
   <Container>
-    <h2>{'<M />'}</h2>
-
-    <MenuButton type="button">
-      <HiMenu />
-    </MenuButton>
+    <ContentContainer>
+      <h2>{'<M />'}</h2>
+      <MenuButton type="button">
+        <HiMenu />
+      </MenuButton>
+    </ContentContainer>
   </Container>
 );
 

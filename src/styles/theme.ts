@@ -10,7 +10,8 @@ const theme = {
     grey_800: '#eeeeee'
   },
   padding: {
-    section: '20px 10px'
+    width: '90%',
+    section: '20px 0'
   }
 };
 

@@ -1,16 +1,18 @@
-import Wave from '../../assets/black_wave.svg';
 import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import { Container, IconsContainer, Studying, TechStack } from './style';
 import useDataBase from '../../Providers/Database';
+import ContentContainer from '../ContentContainer';
+import WaveContainer from '../WaveContainer';
 
 const Technologies = () => {
   const { techsList, studyingTechsList } = useDataBase();
 
   return (
     <Section backgroundColor="white" fontColor="black">
-      <div>
-        <Wave />
+      <WaveContainer img="/black_wave.svg" />
+
+      <ContentContainer>
         <Container>
           <TechStack>
             <SectionTitle
@@ -44,7 +46,7 @@ const Technologies = () => {
             </IconsContainer>
           </Studying>
         </Container>
-      </div>
+      </ContentContainer>
     </Section>
   );
 };

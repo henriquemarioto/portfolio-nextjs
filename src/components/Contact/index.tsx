@@ -1,20 +1,24 @@
 import Section from '../Section';
 import { Container } from './style';
-import Wave from '../../assets/blue_wave.svg';
 import SectionTitle from '../SectionTitle';
 import ContactForm from '../ContactForm';
+import ContentContainer from '../ContentContainer';
+import WaveContainer from '../WaveContainer';
 
 const Contact = () => (
   <Section backgroundColor="white">
-    <Wave />
-    <Container>
-      <SectionTitle
-        title="Contact me"
-        subTitle="send me an email if you need or via LinkedIn"
-      />
+    <WaveContainer img="/blue_wave.svg" />
 
-      <ContactForm />
-    </Container>
+    <ContentContainer>
+      <Container>
+        <SectionTitle
+          title="Contact me"
+          subTitle="send me an email if you need or via LinkedIn"
+        />
+
+        <ContactForm />
+      </Container>
+    </ContentContainer>
   </Section>
 );
 

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  padding: ${p => p.theme.padding.section};
+
   display: flex;
   flex-direction: column;
   gap: 40px;
-
-  padding: ${p => p.theme.padding.section};
 `;
 
 export const MainInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 
   p {
     text-transform: uppercase;

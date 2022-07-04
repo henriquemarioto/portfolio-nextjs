@@ -5,8 +5,10 @@ export const Container = styled.footer`
   padding: ${p => p.theme.padding.section};
   color: ${p => p.theme.colors.white};
 
-  display: flex;
-  justify-content: space-between;
+  > div {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const InfoContainer = styled.div`
