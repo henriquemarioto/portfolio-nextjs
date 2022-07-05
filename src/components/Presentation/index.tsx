@@ -1,6 +1,5 @@
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import BGGif from '../../assets/bg.gif';
-import Avatar from '../../assets/avatar.svg';
 import Button from '../Button';
 import Section from '../Section';
 import {
@@ -16,7 +15,7 @@ import theme from '../../styles/theme';
 import ContentContainer from '../ContentContainer';
 
 const Presentation = () => (
-  <Section fontColor="white" img={BGGif}>
+  <Section fontColor="white" img={BGGif} id="about">
     <ContentContainer>
       <Container>
         <MainInfo>
@@ -35,14 +34,21 @@ const Presentation = () => (
         <SecondInfo>
           <ProfileInfo>
             <ContainerAvatar>
-              <Avatar />
+              <img src="/avatar.svg" alt="avatar" />
             </ContainerAvatar>
 
             <ContainerText>
               <p>Technology, games, and pixel art lover! </p>
               <span>
                 I started my programming journey in 2017 and I keep improving
-                myself continuously, see more about me.
+                myself continuously, see more{' '}
+                <a
+                  href="https://www.linkedin.com/in/paulo-marioto/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  about me.
+                </a>
               </span>
             </ContainerText>
           </ProfileInfo>
@@ -52,12 +58,19 @@ const Presentation = () => (
               bgColor={theme.colors.white}
               textColor={theme.colors.black}
               allWidth
+              href="https://github.com/henriquemarioto"
+              target="_blank"
             >
               <BsGithub />
               Github
             </Button>
 
-            <Button borded allWidth>
+            <Button
+              borded
+              allWidth
+              href="https://www.linkedin.com/in/paulo-marioto/"
+              target="_blank"
+            >
               <BsLinkedin />
               Linkedin
             </Button>

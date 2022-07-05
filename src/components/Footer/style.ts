@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   border-top: 5px solid ${p => p.theme.colors.blue};
-  padding: ${p => p.theme.padding.section};
   color: ${p => p.theme.colors.white};
 
   > div {
     display: flex;
     justify-content: space-between;
+
+    padding: 10px 0;
   }
 `;
 

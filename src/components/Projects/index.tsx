@@ -12,7 +12,7 @@ const Projects = () => {
   const { projectsList } = useDataBase();
 
   return (
-    <Section backgroundColor="blue">
+    <Section backgroundColor="blue" id="projects">
       <WaveContainer img="/white_wave.svg" />
 
       <ContentContainer>
@@ -22,34 +22,40 @@ const Projects = () => {
             subTitle="projects I've worked on"
             fontColor="white"
           />
+          <ul>
+            {projectsList.map(
+              (
+                {
+                  img,
+                  title,
+                  inProgress,
+                  description,
+                  technologies,
+                  previewUrl,
+                  githubUrl
+                },
+                i
+              ) => (
+                <ProjectCard
+                  key={i}
+                  img={img}
+                  title={title}
+                  inProgress={inProgress}
+                  description={description}
+                  technologies={technologies}
+                  previewUrl={previewUrl}
+                  githubUrl={githubUrl}
+                />
+              )
+            )}
+          </ul>
 
-          {projectsList.map(
-            (
-              {
-                img,
-                title,
-                inProgress,
-                description,
-                technologies,
-                previewUrl,
-                githubUrl
-              },
-              i
-            ) => (
-              <ProjectCard
-                key={i}
-                img={img}
-                title={title}
-                inProgress={inProgress}
-                description={description}
-                technologies={technologies}
-                previewUrl={previewUrl}
-                githubUrl={githubUrl}
-              />
-            )
-          )}
-
-          <Button bgColor={theme.colors.white} textColor={theme.colors.black}>
+          <Button
+            bgColor={theme.colors.white}
+            textColor={theme.colors.black}
+            href="https://github.com/henriquemarioto"
+            target="_blank"
+          >
             See more
           </Button>
         </Container>

@@ -6,7 +6,7 @@ import ContentContainer from '../ContentContainer';
 import WaveContainer from '../WaveContainer';
 
 const Contact = () => (
-  <Section backgroundColor="white">
+  <Section backgroundColor="white" id="contact">
     <WaveContainer img="/blue_wave.svg" />
 
     <ContentContainer>

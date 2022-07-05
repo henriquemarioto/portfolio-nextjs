@@ -9,7 +9,7 @@ const Technologies = () => {
   const { techsList, studyingTechsList } = useDataBase();
 
   return (
-    <Section backgroundColor="white" fontColor="black">
+    <Section backgroundColor="white" fontColor="black" id="techs">
       <WaveContainer img="/black_wave.svg" />
 
       <ContentContainer>

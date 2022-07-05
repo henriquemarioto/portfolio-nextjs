@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: ${p => p.theme.padding.section};
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,5 +8,13 @@ export const Container = styled.div`
 
   > button {
     width: 50%;
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 `;

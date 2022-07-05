@@ -25,6 +25,10 @@ export const Container = styled.div<Props>`
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (min-width: 600px) {
+      font-size: 42px;
+    }
   }
 
   h4 {
@@ -41,5 +45,9 @@ export const Container = styled.div<Props>`
 
     font-size: 12px;
     font-weight: bold;
+
+    @media (min-width: 600px) {
+      font-size: 18px;
+    }
   }
 `;

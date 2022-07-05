@@ -11,7 +11,8 @@ const theme = {
   },
   padding: {
     width: '90%',
-    section: '20px 0'
+    section: '20px 0',
+    section_600: '60px 0'
   }
 };
 

@@ -45,11 +45,11 @@ const ProjectCard = ({
       </Technologies>
 
       <Links>
-        <a href={previewUrl}>
+        <a href={previewUrl} target="_blank" rel="noreferrer">
           <FaLink />
           Preview
         </a>
-        <a href={githubUrl}>
+        <a href={githubUrl} target="_blank" rel="noreferrer">
           <SiGithub /> Code
         </a>
       </Links>

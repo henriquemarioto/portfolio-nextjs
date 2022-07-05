@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
 import { Container } from './style';
 
-interface Props {
+interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   bgColor?: string;
   textColor?: string;
   borded?: boolean;
@@ -14,13 +14,15 @@ export const Button = ({
   textColor,
   borded,
   allWidth,
-  children
+  children,
+  ...rest
 }: Props) => (
   <Container
     bgColor={bgColor}
     textColor={textColor}
     borded={borded}
     allWidth={allWidth}
+    {...rest}
   >
     {children}
   </Container>

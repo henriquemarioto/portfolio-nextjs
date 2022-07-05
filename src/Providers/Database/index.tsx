@@ -175,8 +175,8 @@ export const DataBaseProvider = ({ children }) => {
       description:
         'A clone of the League of Legends login screen, it was my first time using Typescript and I really enjoyed the experience..',
       technologies: ['React', 'Typescript'],
-      previewUrl: 'https://github.com/henriquemarioto/lol-login-screen-react',
-      githubUrl: 'https://lol-login-screen-react.vercel.app/'
+      previewUrl: 'https://lol-login-screen-react.vercel.app/',
+      githubUrl: 'https://github.com/henriquemarioto/lol-login-screen-react'
     }
   ];
 

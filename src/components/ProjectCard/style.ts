@@ -4,15 +4,17 @@ interface Props {
   img: any;
 }
 
-export const Container = styled.div`
+export const Container = styled.li`
   padding: 10px;
   background-color: ${p => p.theme.colors.white};
   color: ${p => p.theme.colors.black};
   border-radius: 5px;
   min-height: 450px;
+  max-width: 400px;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
 `;
 export const ImageContainer = styled.div<Props>`

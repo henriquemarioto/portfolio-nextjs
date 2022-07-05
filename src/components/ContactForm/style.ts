@@ -4,6 +4,7 @@ export const Form = styled.form`
   border: 1px solid ${p => p.theme.colors.blue};
   border-radius: 5px;
   padding: 10px;
+  max-width: 345px;
 
   display: flex;
   flex-direction: column;
@@ -21,4 +22,9 @@ export const Input = styled.input`
   border: 1px solid ${p => p.theme.colors.grey_100};
   border-radius: 5px;
   font-size: 12px;
+
+  @media (min-width: 900px){
+    padding: 10px 5px;
+    font-size: 14px;
+  }
 `;

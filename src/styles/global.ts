@@ -62,7 +62,7 @@ export default createGlobalStyle`
     border: 0;
   }
 
-  button {
+  button, a {
     cursor: pointer;
   }
 
