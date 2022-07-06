@@ -8,6 +8,8 @@ export const Container = styled.div`
   @media (min-width: 900px) {
     width: 60%;
     margin: auto;
+
+    gap: 80px;
   }
 `;
 
@@ -19,6 +21,8 @@ export const TechStack = styled.div`
 
 export const Studying = styled(TechStack)``;
 
+export const Tools = styled(TechStack)``;
+
 export const IconsContainer = styled.ul`
   display: flex;
   justify-content: center;
@@ -26,11 +30,6 @@ export const IconsContainer = styled.ul`
   gap: 15px;
 
   li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
     height: 25px;
 
     font-size: 14px;
@@ -43,9 +42,20 @@ export const IconsContainer = styled.ul`
       transform: scale(150%);
     }
 
-    svg {
-      width: 100%;
+    > a {
       height: 100%;
+      color: ${p => p.theme.colors.black};
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (min-width: 600px) {
