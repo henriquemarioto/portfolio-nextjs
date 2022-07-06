@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-
 import Header from '../components/Header';
 import Presentation from '../components/Presentation';
 import Projects from '../components/Projects';

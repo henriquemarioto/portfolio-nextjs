@@ -5,11 +5,11 @@ import { Container, IconContainer, InfoContainer } from './style';
 
 const Footer = () => (
   <Container>
-    <ContentContainer>
+    <ContentContainer fade="none">
       <InfoContainer>
         <span>© 2022 Paulo Marioto</span>
         <span>
-          Designed by{' '}
+          Designed by
           <a
             href="https://www.linkedin.com/in/paulo-marioto/"
             target="_blank"

@@ -1,5 +1,22 @@
+import { ReactNode } from 'react';
 import { Container } from './style';
 
-const ContentContainer = ({ children }) => <Container>{children}</Container>;
+interface Props {
+  fade?: string;
+  children: ReactNode;
+}
+
+const randomFade = () => {
+  const number = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+  return number ? 'right' : 'left';
+};
+
+const ContentContainer = ({ fade, children }: Props) => (
+  <Container data-aos={fade}>{children}</Container>
+);
+
+ContentContainer.defaultProps = {
+  fade: `fade-right`
+};
 
 export default ContentContainer;
