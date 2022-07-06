@@ -11,8 +11,20 @@ import {
   SiGithub,
   SiJest,
   SiPython,
-  SiDjango
+  SiDjango,
+  SiVite,
+  SiRedux,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNpm,
+  SiYarn,
+  SiFigma,
+  SiInsomnia,
+  SiTrello,
+  SiNotion,
+  SiVisualstudiocode
 } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 import { FaReact, FaNodeJs, FaDocker, FaGitAlt } from 'react-icons/fa';
 import { createContext, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
@@ -22,6 +34,7 @@ import LolLogin from '../../assets/lol-login.jpg';
 interface IconListProps {
   icon: IconType | undefined;
   text: string;
+  link: string;
 }
 
 interface ProjectsProps {
@@ -37,13 +50,15 @@ interface ProjectsProps {
 interface ContextProps {
   techsList: IconListProps[];
   studyingTechsList: IconListProps[];
+  toolsList: IconListProps[];
   projectsList: ProjectsProps[];
 }
 
 const DEFAULT_ICONS_VALUE = [
   {
     icon: undefined,
-    text: ''
+    text: '',
+    link: ''
   }
 ];
 
@@ -62,88 +77,180 @@ const DEFAULT_PROJECT_VALUE = [
 export const DataBaseContext = createContext<ContextProps>({
   techsList: DEFAULT_ICONS_VALUE,
   studyingTechsList: DEFAULT_ICONS_VALUE,
+  toolsList: DEFAULT_ICONS_VALUE,
   projectsList: DEFAULT_PROJECT_VALUE
 });
 
 export const DataBaseProvider = ({ children }) => {
   const techsList: IconListProps[] = [
     {
+      icon: FaGitAlt,
+      text: '',
+      link: 'https://git-scm.com/'
+    },
+    {
       icon: ImHtmlFive,
-      text: ''
+      text: '',
+      link: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
     },
     {
       icon: SiCss3,
-      text: ''
+      text: '',
+      link: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS'
     },
     {
       icon: SiJavascript,
-      text: ''
+      text: '',
+      link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
     },
     {
       icon: FaReact,
-      text: ''
+      text: '',
+      link: 'https://pt-br.reactjs.org/'
+    },
+    {
+      icon: SiVite,
+      text: '',
+      link: 'https://vitejs.dev/'
+    },
+    {
+      icon: TbBrandNextjs,
+      text: '',
+      link: 'https://nextjs.org/'
     },
     {
       icon: SiTypescript,
-      text: ''
+      text: '',
+      link: 'https://www.typescriptlang.org/'
     },
     {
       icon: SiStyledcomponents,
-      text: ''
+      text: '',
+      link: 'https://styled-components.com/'
+    },
+    {
+      icon: SiRedux,
+      text: '',
+      link: 'https://redux.js.org/'
+    },
+    {
+      icon: FaReact,
+      text: 'ContextAPI',
+      link: 'https://pt-br.reactjs.org/docs/context.html'
     },
     {
       icon: FaNodeJs,
-      text: ''
+      text: '',
+      link: 'https://nodejs.org/en/'
     },
     {
       icon: SiExpress,
-      text: ''
+      text: '',
+      link: 'https://expressjs.com/pt-br/'
     },
     {
       icon: undefined,
-      text: 'Typeorm'
+      text: 'Api REST',
+      link: 'https://pt.wikipedia.org/wiki/REST'
+    },
+    {
+      icon: undefined,
+      text: 'TypeORM',
+      link: 'https://typeorm.io/'
+    },
+    {
+      icon: SiJsonwebtokens,
+      text: '',
+      link: 'https://jwt.io/'
     },
     {
       icon: SiJest,
-      text: ''
+      text: '',
+      link: 'https://jestjs.io/pt-BR/'
     },
     {
       icon: SiPostgresql,
-      text: ''
+      text: '',
+      link: 'https://www.postgresql.org/'
     },
     {
-      icon: FaDocker,
-      text: ''
-    },
-    {
-      icon: SiVercel,
-      text: ''
-    },
-    {
-      icon: SiHeroku,
-      text: ''
-    },
-    {
-      icon: FaGitAlt,
-      text: ''
-    },
-    {
-      icon: SiGithub,
-      text: ''
+      icon: SiMongodb,
+      text: '',
+      link: 'https://www.mongodb.com/'
     }
   ];
   const studyingTechsList: IconListProps[] = [
     {
       icon: SiPython,
-      text: ''
+      text: '',
+      link: 'https://www.python.org/'
     },
     {
       icon: SiDjango,
-      text: ''
+      text: '',
+      link: 'https://www.djangoproject.com/'
     },
     {
       icon: FaReact,
-      text: 'Native'
+      text: 'Native',
+      link: 'https://reactnative.dev/'
+    }
+  ];
+  const toolsList: IconListProps[] = [
+    {
+      icon: SiNpm,
+      text: '',
+      link: 'https://www.npmjs.com/'
+    },
+    {
+      icon: SiYarn,
+      text: '',
+      link: 'https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable'
+    },
+    {
+      icon: SiGithub,
+      text: '',
+      link: 'https://github.com/'
+    },
+    {
+      icon: SiHeroku,
+      text: '',
+      link: 'https://www.heroku.com/'
+    },
+    {
+      icon: SiVercel,
+      text: '',
+      link: 'https://vercel.com/'
+    },
+    {
+      icon: FaDocker,
+      text: '',
+      link: 'https://www.docker.com/'
+    },
+    {
+      icon: SiFigma,
+      text: '',
+      link: 'https://www.figma.com/'
+    },
+    {
+      icon: SiInsomnia,
+      text: '',
+      link: 'https://insomnia.rest/'
+    },
+    {
+      icon: SiTrello,
+      text: '',
+      link: 'https://trello.com/'
+    },
+    {
+      icon: SiNotion,
+      text: '',
+      link: 'https://www.notion.so/'
+    },
+    {
+      icon: SiVisualstudiocode,
+      text: '',
+      link: 'https://code.visualstudio.com/'
     }
   ];
   const projectsList: ProjectsProps[] = [
@@ -185,6 +292,7 @@ export const DataBaseProvider = ({ children }) => {
       value={{
         techsList,
         studyingTechsList,
+        toolsList,
         projectsList
       }}
     >
