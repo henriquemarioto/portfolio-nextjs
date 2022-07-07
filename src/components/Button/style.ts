@@ -7,7 +7,7 @@ interface Props {
   allWidth: boolean;
 }
 
-export const Container = styled.a<Props>`
+export const Container = styled.button<Props>`
   background-color: ${p => p.bgColor || p.theme.colors.black};
   color: ${p => p.textColor || p.theme.colors.white};
 
@@ -17,7 +17,6 @@ export const Container = styled.a<Props>`
   padding: 10px;
   border-radius: 5px;
   border: ${p => p.borded && `1px solid ${p.theme.colors.grey_100}`};
-  text-decoration: none;
 
   display: flex;
   align-items: center;

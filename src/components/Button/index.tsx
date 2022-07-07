@@ -1,7 +1,7 @@
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Container } from './style';
 
-interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   bgColor?: string;
   textColor?: string;
   borded?: boolean;
