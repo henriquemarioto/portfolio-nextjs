@@ -1,6 +1,5 @@
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import BGGif from '../../assets/bg.gif';
-import Button from '../Button';
 import Section from '../Section';
 import {
   ButtonContainer,
@@ -13,6 +12,7 @@ import {
 } from './style';
 import theme from '../../styles/theme';
 import ContentContainer from '../ContentContainer';
+import Anchor from '../Anchor';
 
 const Presentation = () => (
   <Section fontColor="white" img={BGGif} id="about">
@@ -54,26 +54,30 @@ const Presentation = () => (
           </ProfileInfo>
 
           <ButtonContainer>
-            <Button
+            <Anchor
               bgColor={theme.colors.white}
               textColor={theme.colors.black}
               allWidth
               href="https://github.com/henriquemarioto"
               target="_blank"
+              rel="noreferrer"
             >
               <BsGithub />
               Github
-            </Button>
+            </Anchor>
 
-            <Button
-              borded
+            <Anchor
+              bgColor={theme.colors.black}
+              textColor={theme.colors.white}
               allWidth
+              borded
               href="https://www.linkedin.com/in/paulo-marioto/"
               target="_blank"
+              rel="noreferrer"
             >
               <BsLinkedin />
               Linkedin
-            </Button>
+            </Anchor>
           </ButtonContainer>
         </SecondInfo>
       </Container>

@@ -31,12 +31,12 @@ export const IconsContainer = styled.ul`
 
   li {
     height: 25px;
-
+    background-color: ${p => p.theme.colors.white};
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
 
-    transition: 100ms;
+    transition: 300ms;
 
     :hover {
       transform: scale(150%);

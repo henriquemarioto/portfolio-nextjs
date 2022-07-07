@@ -38,7 +38,7 @@ const ProjectCard = ({
         {inProgress && <span>In progress</span>}
       </Title>
 
-      <Description>{description}</Description>
+      <Description>{description}.</Description>
 
       <Technologies>
         <strong>Technologies</strong>: <span>{technologies.join(', ')}</span>

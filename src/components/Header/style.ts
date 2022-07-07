@@ -16,9 +16,34 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 
     h2 {
       font-size: 24px;
+    }
+
+    ul {
+      display: none;
+
+      li {
+        a {
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          transition: 300ms;
+
+          :hover {
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
+
+      @media (min-width: 700px) {
+        display: flex;
+        gap: 20px;
+      }
     }
   }
 `;
@@ -27,11 +52,20 @@ export const MenuButton = styled.nav`
   background-color: transparent;
   border: none;
   color: ${p => p.theme.colors.white};
+  position: relative;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
 
   #menuToggle {
     display: block;
     position: relative;
     z-index: 1;
+
+    ul {
+      display: block;
+    }
   }
   #menuToggle li:hover {
     color: black;
@@ -43,8 +77,8 @@ export const MenuButton = styled.nav`
     cursor: pointer;
     width: 40px;
     height: 100%;
-    top: -7px;
-    left: -5px;
+    top: 0;
+    left: 0;
     opacity: 0;
     z-index: 2;
   }

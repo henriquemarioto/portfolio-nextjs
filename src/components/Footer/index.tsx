@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import Button from '../Button';
+import Anchor from '../Anchor';
 import ContentContainer from '../ContentContainer';
 import { Container, IconContainer, InfoContainer } from './style';
 
@@ -9,7 +9,7 @@ const Footer = () => (
       <InfoContainer>
         <span>© 2022 Paulo Marioto</span>
         <span>
-          Designed by
+          Designed by&ensp;
           <a
             href="https://www.linkedin.com/in/paulo-marioto/"
             target="_blank"
@@ -21,16 +21,16 @@ const Footer = () => (
       </InfoContainer>
 
       <IconContainer>
-        <Button href="https://github.com/henriquemarioto" target="_blank">
+        <Anchor href="https://github.com/henriquemarioto" target="_blank">
           <FaGithub />
-        </Button>
+        </Anchor>
 
-        <Button
+        <Anchor
           href="https://www.linkedin.com/in/paulo-marioto/"
           target="_blank"
         >
           <FaLinkedin />
-        </Button>
+        </Anchor>
       </IconContainer>
     </ContentContainer>
   </Container>

@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
 
-  > button {
+  > a {
     width: 50%;
   }
 

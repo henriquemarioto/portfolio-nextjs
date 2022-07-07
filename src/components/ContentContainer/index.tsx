@@ -6,11 +6,6 @@ interface Props {
   children: ReactNode;
 }
 
-const randomFade = () => {
-  const number = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
-  return number ? 'right' : 'left';
-};
-
 const ContentContainer = ({ fade, children }: Props) => (
   <Container data-aos={fade}>{children}</Container>
 );

@@ -3,10 +3,10 @@ import { Container } from './style';
 import SectionTitle from '../SectionTitle';
 import useDataBase from '../../Providers/Database';
 import ProjectCard from '../ProjectCard';
-import Button from '../Button';
 import theme from '../../styles/theme';
 import ContentContainer from '../ContentContainer';
 import WaveContainer from '../WaveContainer';
+import Anchor from '../Anchor';
 
 const Projects = () => {
   const { projectsList } = useDataBase();
@@ -50,14 +50,15 @@ const Projects = () => {
             )}
           </ul>
 
-          <Button
+          <Anchor
             bgColor={theme.colors.white}
             textColor={theme.colors.black}
             href="https://github.com/henriquemarioto"
             target="_blank"
+            rel="noreferrer"
           >
             See more
-          </Button>
+          </Anchor>
         </Container>
       </ContentContainer>
     </Section>
