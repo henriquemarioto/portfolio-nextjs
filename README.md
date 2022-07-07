@@ -1,4 +1,4 @@
-# Meu portfólio
+# Paulo Marioto portfólio
 
 This is my portfolio website, here you will find some links to communicate with me, see my projects and technologies that I use
 ### Preview link: https://portfolio-marioto-nextjs.vercel.app/
