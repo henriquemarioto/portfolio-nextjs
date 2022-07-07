@@ -7,30 +7,8 @@ interface Props {
 }
 
 export const Container = styled.section<Props>`
-  color: ${p => {
-    switch (p.fontColor) {
-      case 'white':
-        return p.theme.colors.white;
-      case 'black':
-        return p.theme.colors.black;
-      case 'blue':
-        return p.theme.colors.white;
-      default:
-        return p.theme.colors.white;
-    }
-  }};
-  background-color: ${p => {
-    switch (p.backgroundColor) {
-      case 'white':
-        return p.theme.colors.white;
-      case 'black':
-        return p.theme.colors.black;
-      case 'blue':
-        return p.theme.colors.blue;
-      default:
-        return 'transparent';
-    }
-  }};
+  color: ${p => p.fontColor};
+  background-color: ${p => p.backgroundColor};
 
   position: relative;
 

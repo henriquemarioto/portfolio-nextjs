@@ -4,13 +4,23 @@ import { Container, IconsContainer, Studying, TechStack, Tools } from './style';
 import useDataBase from '../../Providers/Database';
 import ContentContainer from '../ContentContainer';
 import WaveContainer from '../WaveContainer';
+import Wave from '../Wave';
+import theme from '../../styles/theme';
 
 const Technologies = () => {
   const { techsList, studyingTechsList, toolsList } = useDataBase();
 
   return (
-    <Section backgroundColor="white" fontColor="black" id="techs">
-      <WaveContainer img="/black_wave.svg" />
+    <Section
+      backgroundColor={theme.colors.white}
+      fontColor={theme.colors.black}
+      id="techs"
+    >
+      <WaveContainer backgroundColor={theme.colors.black}>
+        <Wave />
+        <Wave />
+        <Wave />
+      </WaveContainer>
 
       <ContentContainer>
         <Container>

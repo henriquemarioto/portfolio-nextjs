@@ -7,13 +7,18 @@ import theme from '../../styles/theme';
 import ContentContainer from '../ContentContainer';
 import WaveContainer from '../WaveContainer';
 import Anchor from '../Anchor';
+import Wave from '../Wave';
 
 const Projects = () => {
   const { projectsList } = useDataBase();
 
   return (
-    <Section backgroundColor="blue" id="projects">
-      <WaveContainer img="/white_wave.svg" />
+    <Section backgroundColor={theme.colors.blue} id="projects">
+      <WaveContainer backgroundColor={theme.colors.white}>
+        <Wave color="blue" />
+        <Wave color="blue" />
+        <Wave color="blue" />
+      </WaveContainer>
 
       <ContentContainer>
         <Container>
