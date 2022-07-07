@@ -1,6 +1,7 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { ThemeProvider } from 'styled-components';
+import { Toaster } from 'react-hot-toast';
 
 import { useEffect } from 'react';
 import GlobalStyles from '../styles/global';
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Providers>
       <GlobalStyles />
+      <Toaster />
     </ThemeProvider>
   );
 }
