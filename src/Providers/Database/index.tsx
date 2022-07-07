@@ -30,6 +30,7 @@ import { createContext, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
 import Borarachar from '../../assets/borarachar.png';
 import LolLogin from '../../assets/lol-login.jpg';
+import Opencred from '../../assets/opencred.gif';
 
 interface IconListProps {
   icon: IconType | undefined;
@@ -259,7 +260,7 @@ export const DataBaseProvider = ({ children }) => {
       title: 'Pokedex',
       inProgress: true,
       description:
-        'A Pokedex, containing all pokemon information, registration system to create profile with favorite pokemons and share with others.',
+        'A Pokedex, containing all pokemon information, registration system to create profile with favorite pokemons and share with others',
       technologies: ['React', 'Next', 'Typescript'],
       previewUrl: '',
       githubUrl: ''
@@ -269,8 +270,15 @@ export const DataBaseProvider = ({ children }) => {
       title: 'Borarachar',
       inProgress: false,
       description:
-        'Borarachar is a website to share streaming services with other people, such as Netflix, Spotify, among others.',
-      technologies: ['React'],
+        'Borarachar is a website to share streaming services with other people, such as Netflix, Spotify, among others',
+      technologies: [
+        'React',
+        'React-router-dom',
+        'Styled-components',
+        'React-hook-form',
+        'Yup',
+        'Axios'
+      ],
       previewUrl:
         'https://capstone-m3-borarachar-git-master-henriquemarioto.vercel.app/',
       githubUrl: 'https://github.com/henriquemarioto/capstone-m3-borarachar'
@@ -280,10 +288,26 @@ export const DataBaseProvider = ({ children }) => {
       title: 'League of Legends Login',
       inProgress: false,
       description:
-        'A clone of the League of Legends login screen, it was my first time using Typescript and I really enjoyed the experience..',
-      technologies: ['React', 'Typescript'],
+        'A clone of the League of Legends login screen, it was my first time using Typescript and I really enjoyed the experience',
+      technologies: ['React', 'ViteJS', 'Typescript', 'Styled-components'],
       previewUrl: 'https://lol-login-screen-react.vercel.app/',
       githubUrl: 'https://github.com/henriquemarioto/lol-login-screen-react'
+    },
+    {
+      img: Opencred,
+      title: 'OpenCred',
+      inProgress: false,
+      description:
+        'A farm management screen, using dynamic charts with ChartJS',
+      technologies: [
+        'React',
+        'ViteJS',
+        'Typescript',
+        'Styled-components',
+        'React-chartjs-2'
+      ],
+      previewUrl: 'https://open-cred-demo.vercel.app/',
+      githubUrl: 'https://github.com/henriquemarioto/open-cred-demo'
     }
   ];
 
