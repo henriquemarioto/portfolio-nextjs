@@ -1,8 +1,8 @@
 # Paulo Marioto portfólio
 
 This is my portfolio website, here you will find some links to communicate with me, see my projects and technologies that I use
-### Preview link: https://portfolio-marioto-nextjs.vercel.app/
-### Figma link: https://www.figma.com/file/MPNyQmnxEGh3FzlCL8SUpo/Portfolio-Paulo-Marioto?node-id=0%3A1
+Preview link: [https://portfolio-marioto-nextjs.vercel.app/](https://portfolio-marioto.vercel.app/)
+Figma link: [https://www.figma.com/file/MPNyQmnxEGh3FzlCL8SUpo/Portfolio-Paulo-Marioto?node-id=0%3A1](https://www.figma.com/design/MPNyQmnxEGh3FzlCL8SUpo/Portfolio-Paulo-Marioto?node-id=0-1&node-type=canvas&t=fEjpC6aXraoxxCRO-0)
 
 ## 🎬 Prints
 <div align="center">
