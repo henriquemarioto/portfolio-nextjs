@@ -10,10 +10,7 @@ import {
   SiHeroku,
   SiGithub,
   SiJest,
-  SiPython,
-  SiDjango,
   SiVite,
-  SiRedux,
   SiJsonwebtokens,
   SiMongodb,
   SiNpm,
@@ -22,19 +19,36 @@ import {
   SiInsomnia,
   SiTrello,
   SiNotion,
-  SiVisualstudiocode
+  SiTailwindcss,
+  SiNestjs,
+  SiMysql,
+  SiRedis,
+  SiTypeorm,
+  SiSequelize,
+  SiPrisma,
+  SiGooglecloud,
+  SiPostman,
+  SiJira,
+  SiUbuntu
 } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
-import { FaReact, FaNodeJs, FaDocker, FaGitAlt } from 'react-icons/fa';
+import { TbBrandAzure, TbBrandNextjs } from 'react-icons/tb';
+import {
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaGitAlt,
+  FaWindows
+} from 'react-icons/fa';
+import { BiLogoVisualStudio } from 'react-icons/bi';
 import { createContext, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
 import Borarachar from '../../assets/borarachar.png';
 import LolLogin from '../../assets/lol-login.jpg';
 import Opencred from '../../assets/opencred.gif';
 
-interface IconListProps {
+export interface IconListProps {
   icon: IconType | undefined;
-  text: string;
+  name: string;
   link: string;
 }
 
@@ -49,8 +63,9 @@ interface ProjectsProps {
 }
 
 interface ContextProps {
-  techsList: IconListProps[];
-  studyingTechsList: IconListProps[];
+  codeList: IconListProps[];
+  databaseList: IconListProps[];
+  deployList: IconListProps[];
   toolsList: IconListProps[];
   projectsList: ProjectsProps[];
 }
@@ -58,7 +73,7 @@ interface ContextProps {
 const DEFAULT_ICONS_VALUE = [
   {
     icon: undefined,
-    text: '',
+    name: '',
     link: ''
   }
 ];
@@ -76,182 +91,215 @@ const DEFAULT_PROJECT_VALUE = [
 ];
 
 export const DataBaseContext = createContext<ContextProps>({
-  techsList: DEFAULT_ICONS_VALUE,
-  studyingTechsList: DEFAULT_ICONS_VALUE,
+  codeList: DEFAULT_ICONS_VALUE,
+  databaseList: DEFAULT_ICONS_VALUE,
+  deployList: DEFAULT_ICONS_VALUE,
   toolsList: DEFAULT_ICONS_VALUE,
   projectsList: DEFAULT_PROJECT_VALUE
 });
 
 export const DataBaseProvider = ({ children }) => {
-  const techsList: IconListProps[] = [
-    {
-      icon: FaGitAlt,
-      text: '',
-      link: 'https://git-scm.com/'
-    },
+  const codeList: IconListProps[] = [
     {
       icon: ImHtmlFive,
-      text: '',
+      name: 'HTML',
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
     },
     {
       icon: SiCss3,
-      text: '',
+      name: 'CSS',
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS'
     },
     {
       icon: SiJavascript,
-      text: '',
+      name: 'Javascript',
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
     },
     {
+      icon: SiTypescript,
+      name: 'Typescript',
+      link: 'https://www.typescriptlang.org/'
+    },
+    {
+      icon: FaNodeJs,
+      name: 'Nodejs',
+      link: 'https://nodejs.org/en/'
+    },
+    {
       icon: FaReact,
-      text: '',
+      name: 'Reactjs',
       link: 'https://pt-br.reactjs.org/'
     },
     {
       icon: SiVite,
-      text: '',
+      name: 'Vite',
       link: 'https://vitejs.dev/'
     },
     {
       icon: TbBrandNextjs,
-      text: '',
+      name: 'Nextjs',
       link: 'https://nextjs.org/'
     },
     {
-      icon: SiTypescript,
-      text: '',
-      link: 'https://www.typescriptlang.org/'
-    },
-    {
       icon: SiStyledcomponents,
-      text: '',
+      name: 'Styled-components',
       link: 'https://styled-components.com/'
     },
     {
-      icon: SiRedux,
-      text: '',
-      link: 'https://redux.js.org/'
-    },
-    {
-      icon: FaReact,
-      text: 'ContextAPI',
-      link: 'https://pt-br.reactjs.org/docs/context.html'
-    },
-    {
-      icon: FaNodeJs,
-      text: '',
-      link: 'https://nodejs.org/en/'
+      icon: SiTailwindcss,
+      name: 'Tailwindcss',
+      link: 'https://tailwindcss.com/'
     },
     {
       icon: SiExpress,
-      text: '',
+      name: 'Express',
       link: 'https://expressjs.com/pt-br/'
     },
     {
-      icon: undefined,
-      text: 'Api REST',
-      link: 'https://pt.wikipedia.org/wiki/REST'
-    },
-    {
-      icon: undefined,
-      text: 'TypeORM',
-      link: 'https://typeorm.io/'
-    },
-    {
-      icon: SiJsonwebtokens,
-      text: '',
-      link: 'https://jwt.io/'
+      icon: SiNestjs,
+      name: 'Nestjs',
+      link: 'https://nestjs.com/'
     },
     {
       icon: SiJest,
-      text: '',
+      name: '',
       link: 'https://jestjs.io/pt-BR/'
     },
     {
+      icon: SiJsonwebtokens,
+      name: 'JWT',
+      link: 'https://jwt.io/'
+    }
+  ];
+  const databaseList: IconListProps[] = [
+    {
+      icon: SiMysql,
+      name: 'Mysql',
+      link: 'https://www.mysql.com/'
+    },
+    {
       icon: SiPostgresql,
-      text: '',
+      name: 'Postgresql',
       link: 'https://www.postgresql.org/'
     },
     {
       icon: SiMongodb,
-      text: '',
+      name: 'Mongodb',
       link: 'https://www.mongodb.com/'
+    },
+    {
+      icon: SiRedis,
+      name: 'Redis',
+      link: 'https://redis.io/'
+    },
+    {
+      icon: SiTypeorm,
+      name: 'TypeORM',
+      link: 'https://typeorm.io/'
+    },
+    {
+      icon: SiSequelize,
+      name: 'Sequelize',
+      link: 'https://sequelize.org/'
+    },
+    {
+      icon: SiPrisma,
+      name: 'Prisma',
+      link: 'https://www.prisma.io/'
     }
   ];
-  const studyingTechsList: IconListProps[] = [
+  const deployList: IconListProps[] = [
     {
-      icon: SiPython,
-      text: '',
-      link: 'https://www.python.org/'
+      icon: SiGooglecloud,
+      name: 'Google Cloud',
+      link: 'https://cloud.google.com/?hl=pt-BR'
     },
     {
-      icon: SiDjango,
-      text: '',
-      link: 'https://www.djangoproject.com/'
+      icon: SiVercel,
+      name: 'Vercel',
+      link: 'https://vercel.com/'
     },
     {
-      icon: FaReact,
-      text: 'Native',
-      link: 'https://reactnative.dev/'
+      icon: SiHeroku,
+      name: 'Vercel',
+      link: 'https://vercel.com/'
     }
   ];
   const toolsList: IconListProps[] = [
     {
+      icon: FaGitAlt,
+      name: 'Git',
+      link: 'https://git-scm.com/'
+    },
+    {
+      icon: SiGithub,
+      name: 'Github',
+      link: 'https://github.com/'
+    },
+    {
       icon: SiNpm,
-      text: '',
+      name: 'Npm',
       link: 'https://www.npmjs.com/'
     },
     {
       icon: SiYarn,
-      text: '',
+      name: 'Yarn',
       link: 'https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable'
     },
     {
-      icon: SiGithub,
-      text: '',
-      link: 'https://github.com/'
-    },
-    {
-      icon: SiHeroku,
-      text: '',
-      link: 'https://www.heroku.com/'
-    },
-    {
-      icon: SiVercel,
-      text: '',
-      link: 'https://vercel.com/'
-    },
-    {
       icon: FaDocker,
-      text: '',
+      name: 'Docker',
       link: 'https://www.docker.com/'
     },
     {
-      icon: SiFigma,
-      text: '',
-      link: 'https://www.figma.com/'
+      icon: BiLogoVisualStudio,
+      name: 'Visual Studio Code',
+      link: 'https://code.visualstudio.com/'
+    },
+    {
+      icon: SiPostman,
+      name: 'Postman',
+      link: 'https://www.postman.com/'
     },
     {
       icon: SiInsomnia,
-      text: '',
+      name: 'Insomnia',
       link: 'https://insomnia.rest/'
     },
     {
-      icon: SiTrello,
-      text: '',
-      link: 'https://trello.com/'
-    },
-    {
       icon: SiNotion,
-      text: '',
+      name: 'Notion',
       link: 'https://www.notion.so/'
     },
     {
-      icon: SiVisualstudiocode,
-      text: '',
-      link: 'https://code.visualstudio.com/'
+      icon: SiFigma,
+      name: 'Figma',
+      link: 'https://www.figma.com/'
+    },
+    {
+      icon: SiTrello,
+      name: 'Trello',
+      link: 'https://trello.com/'
+    },
+    {
+      icon: TbBrandAzure,
+      name: 'Azure Boards',
+      link: 'https://azure.microsoft.com/pt-br/products/devops/boards'
+    },
+    {
+      icon: SiJira,
+      name: 'Jira',
+      link: 'https://www.atlassian.com/br/software/jira'
+    },
+    {
+      icon: SiUbuntu,
+      name: 'Ubuntu',
+      link: 'https://ubuntu.com/'
+    },
+    {
+      icon: FaWindows,
+      name: 'Windows',
+      link: 'https://www.microsoft.com/pt-br/windows'
     }
   ];
   const projectsList: ProjectsProps[] = [
@@ -314,8 +362,9 @@ export const DataBaseProvider = ({ children }) => {
   return (
     <DataBaseContext.Provider
       value={{
-        techsList,
-        studyingTechsList,
+        codeList,
+        databaseList,
+        deployList,
         toolsList,
         projectsList
       }}

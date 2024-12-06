@@ -1,5 +1,7 @@
 import { DataBaseProvider } from './Database';
 
-export default ({ children }) => (
+const Providers = ({ children }) => (
   <DataBaseProvider>{children}</DataBaseProvider>
 );
+
+export default Providers;

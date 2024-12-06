@@ -38,7 +38,7 @@ const Presentation = () => (
             </ContainerAvatar>
 
             <ContainerText>
-              <p>Technology, games, and pixel art lover! </p>
+              <h3>Technology, games, and pixel art lover! </h3>
               <span>
                 I started my programming journey in 2017 and I keep improving
                 myself continuously, see more{' '}

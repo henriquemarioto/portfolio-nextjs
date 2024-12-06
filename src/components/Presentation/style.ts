@@ -115,7 +115,9 @@ export const ContainerText = styled.div`
   flex-direction: column;
   gap: 5px;
 
-  p {
+  h3 {
+    font-weight: bold;
+
     @media (min-width: 900px) {
       font-size: 28px;
     }

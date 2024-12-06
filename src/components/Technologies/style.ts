@@ -13,15 +13,11 @@ export const Container = styled.div`
   }
 `;
 
-export const TechStack = styled.div`
+export const StackSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
 `;
-
-export const Studying = styled(TechStack)``;
-
-export const Tools = styled(TechStack)``;
 
 export const IconsContainer = styled.ul`
   display: flex;
