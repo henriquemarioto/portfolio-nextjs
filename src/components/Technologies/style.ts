@@ -49,18 +49,26 @@ export const IconsContainer = styled.ul`
       gap: 5px;
 
       svg {
-        width: 100%;
-        height: 100%;
+        width: 25px;
+        height: 25px;
+
+        @media (min-width: 600px) {
+          height: 40px;
+          width: 40px;
+        }
+
+        @media (min-width: 900px) {
+          height: 50px;
+          width: 50px;
+        }
       }
     }
 
     @media (min-width: 600px) {
-      height: 40px;
       font-size: 18px;
     }
 
     @media (min-width: 900px) {
-      height: 50px;
       font-size: 24px;
     }
   }
