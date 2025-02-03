@@ -305,13 +305,13 @@ export const DataBaseProvider = ({ children }) => {
   const projectsList: ProjectsProps[] = [
     {
       img: '',
-      title: 'Pokedex',
+      title: 'Bilhetezada',
       inProgress: true,
       description:
-        'A Pokedex, containing all pokemon information, registration system to create profile with favorite pokemons and share with others',
-      technologies: ['React', 'Next', 'Typescript'],
+        'Bilhetezada is an application designed to simplify the creation, management, and sale of event tickets. Our goal is to provide a complete platform for organizers and attendees, streamlining the experience from event creation to access control.',
+      technologies: ['Nodejs', 'Typescript', 'Nestjs', 'Next'],
       previewUrl: '',
-      githubUrl: ''
+      githubUrl: 'https://github.com/henriquemarioto/bilhetezada'
     },
     {
       img: Borarachar,
