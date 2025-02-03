@@ -309,7 +309,7 @@ export const DataBaseProvider = ({ children }) => {
       inProgress: true,
       description:
         'Bilhetezada is an application designed to simplify the creation, management, and sale of event tickets. Our goal is to provide a complete platform for organizers and attendees, streamlining the experience from event creation to access control.',
-      technologies: ['Nodejs', 'Typescript', 'Nestjs', 'Next'],
+      technologies: ['Nodejs', 'Typescript', 'Nestjs', 'Nextjs'],
       previewUrl: '',
       githubUrl: 'https://github.com/henriquemarioto/bilhetezada'
     },
