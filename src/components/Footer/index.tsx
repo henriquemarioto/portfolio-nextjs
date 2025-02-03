@@ -7,7 +7,7 @@ const Footer = () => (
   <Container>
     <ContentContainer fade="none">
       <InfoContainer>
-        <span>© 2022 Paulo Marioto</span>
+        <span>© {new Date().getFullYear()} Paulo Marioto</span>
         <span>
           Designed by&ensp;
           <a
