@@ -29,20 +29,17 @@ const Projects = () => {
           />
           <ul>
             {projectsList.map(
-              (
-                {
-                  img,
-                  title,
-                  inProgress,
-                  description,
-                  technologies,
-                  previewUrl,
-                  githubUrl
-                },
-                i
-              ) => (
+              ({
+                img,
+                title,
+                inProgress,
+                description,
+                technologies,
+                previewUrl,
+                githubUrl
+              }) => (
                 <ProjectCard
-                  key={i}
+                  key={title}
                   img={img}
                   title={title}
                   inProgress={inProgress}

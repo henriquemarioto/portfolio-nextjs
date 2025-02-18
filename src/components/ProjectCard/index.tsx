@@ -38,20 +38,24 @@ const ProjectCard = ({
         {inProgress && <span>In progress</span>}
       </Title>
 
-      <Description>{description}.</Description>
+      <Description>{description}</Description>
 
       <Technologies>
         <strong>Technologies</strong>: <span>{technologies.join(', ')}</span>
       </Technologies>
 
       <Links>
-        <a href={previewUrl} target="_blank" rel="noreferrer">
-          <FaLink />
-          Preview
-        </a>
-        <a href={githubUrl} target="_blank" rel="noreferrer">
-          <SiGithub /> Code
-        </a>
+        {previewUrl && (
+          <a href={previewUrl} target="_blank" rel="noreferrer">
+            <FaLink />
+            Preview
+          </a>
+        )}
+        {githubUrl && (
+          <a href={githubUrl} target="_blank" rel="noreferrer">
+            <SiGithub /> Code
+          </a>
+        )}
       </Links>
     </InfoContainer>
   </Container>

@@ -52,11 +52,11 @@ const Technologies = () => {
       <ContentContainer>
         <Container>
           {sections.map(data => (
-            <StackSection>
+            <StackSection key={data.title}>
               <SectionTitle title={data.title} subTitle={data.subtitle} />
               <IconsContainer>
-                {data.list.map((tech, i) => (
-                  <li key={i}>
+                {data.list.map(tech => (
+                  <li key={tech.name}>
                     <a href={tech.link} target="_blank" rel="noreferrer">
                       {tech.icon && (
                         <tech.icon title={tech.name} aria-label={tech.name} />

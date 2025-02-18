@@ -45,6 +45,7 @@ import { IconType } from 'react-icons/lib';
 import Borarachar from '../../assets/borarachar.png';
 import LolLogin from '../../assets/lol-login.jpg';
 import Opencred from '../../assets/opencred.gif';
+import EscolaDaTerra from '../../assets/escola-da-terra.png';
 
 export interface IconListProps {
   icon: IconType | undefined;
@@ -221,8 +222,8 @@ export const DataBaseProvider = ({ children }) => {
     },
     {
       icon: SiHeroku,
-      name: 'Vercel',
-      link: 'https://vercel.com/'
+      name: 'Heroku',
+      link: 'https://www.heroku.com/'
     }
   ];
   const toolsList: IconListProps[] = [
@@ -312,6 +313,16 @@ export const DataBaseProvider = ({ children }) => {
       technologies: ['Nodejs', 'Typescript', 'Nestjs', 'Nextjs'],
       previewUrl: '',
       githubUrl: 'https://github.com/henriquemarioto/bilhetezada'
+    },
+    {
+      img: EscolaDaTerra,
+      title: 'Escola da Terra',
+      inProgress: false,
+      description:
+        'Design and presentation website created for Escola da Terra.',
+      technologies: ['Nodejs', 'Astro', 'Tailwindcss'],
+      previewUrl: 'https://escoladaterramendes.com.br/',
+      githubUrl: ''
     },
     {
       img: Borarachar,
